@@ -1,6 +1,6 @@
-## Spring CLoud使用方式
+# Spring CLoud使用方式
 
-### 基本原理
+## 基本原理
 
 >1. 通过@EnableFeignClients开启使用feignclient
 >
@@ -15,7 +15,7 @@
 >
 >4. 调用bean时，根据url获取调用地址
 
-### 不使用注册中心
+## 不使用注册中心
 
 >- 引入openfeign依赖
 >
@@ -47,12 +47,12 @@ public interface UserApi {
 }
 ```
 
-### 扩展
+## 扩展
 
 - 如果使用@FeignClient实现动态配置URL，即从数据库中读取，而不是通过配置文件???
   - 思路一：通过修改Environment中属性的值，从而在获取占位符时，动态调整
 
-#### 使用熔断
+### 使用熔断
 
 >- 熔断框架支持sentinel、hytrix等，这里以sentinel为例
 
@@ -108,13 +108,13 @@ public interface UserApi {
 >@FeignClient(name = "auth-user", url = "${openapi.auth.url}", path = "/user", fallbackFactory = UserApiFallbackFactory.class)
 >```
 
-### 配置
+## 配置
 
 >- 推荐使用配置文件进行配置，简单灵活可读性高
 
-#### 单服务配置
+### 单服务配置
 
-##### 通过@FeignClient配置
+#### 通过@FeignClient配置
 
 >- 通过@FeignClient指定配置，可对不同的服务提供不同的配置
 
@@ -144,7 +144,7 @@ public interface UserApi {
 >
 >```
 
-##### 配置文件中配置
+#### 配置文件中配置
 
 >```yml
 >feign:
@@ -159,9 +159,9 @@ public interface UserApi {
 >- 其中，auth-user为@feignClient中配置的name值，用于标识针对哪个接口进行配置
 >- 配置文件的优先级高于@FeignClient的配置
 
-#### 全局配置
+### 全局配置
 
-##### bean注入配置形式
+#### bean注入配置形式
 
 - 方式一
 
@@ -210,7 +210,7 @@ public class OpenFeignConfig {
 >@EnableFeignClients(defaultConfiguration = OpenFeignConfig.class)
 >```
 
-##### 配置文件配置
+#### 配置文件配置
 
 ```yml
 feign:
