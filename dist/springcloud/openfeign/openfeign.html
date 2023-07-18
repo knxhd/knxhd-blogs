@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Spring CLoud使用方式 | 柯南小海盗的博客</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="YYY">
+    
+    <link rel="preload" href="/assets/css/0.styles.9fd8d03b.css" as="style"><link rel="preload" href="/assets/js/app.6e5730b0.js" as="script"><link rel="preload" href="/assets/js/2.733019b2.js" as="script"><link rel="preload" href="/assets/js/8.caa05805.js" as="script"><link rel="prefetch" href="/assets/js/10.6ee7c277.js"><link rel="prefetch" href="/assets/js/3.414988de.js"><link rel="prefetch" href="/assets/js/4.d12742be.js"><link rel="prefetch" href="/assets/js/5.216cae74.js"><link rel="prefetch" href="/assets/js/6.2d0a63f8.js"><link rel="prefetch" href="/assets/js/7.90ad1699.js"><link rel="prefetch" href="/assets/js/9.3b705d7e.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9fd8d03b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">柯南小海盗的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="springcloud" class="dropdown-title"><span class="title">springcloud</span> <span class="arrow down"></span></button> <button type="button" aria-label="springcloud" class="mobile-dropdown-title"><span class="title">springcloud</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/springcloud/openfeign/openfeign.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Openfeign
+</a></li><li class="dropdown-item"><!----> <a href="/springcloud/sentinel/sentinel.html" class="nav-link">
+  Sentinel
+</a></li><li class="dropdown-item"><!----> <a href="/springcloud/springcloud.html" class="nav-link">
+  Springcloud
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="springcloud" class="dropdown-title"><span class="title">springcloud</span> <span class="arrow down"></span></button> <button type="button" aria-label="springcloud" class="mobile-dropdown-title"><span class="title">springcloud</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/springcloud/openfeign/openfeign.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Openfeign
+</a></li><li class="dropdown-item"><!----> <a href="/springcloud/sentinel/sentinel.html" class="nav-link">
+  Sentinel
+</a></li><li class="dropdown-item"><!----> <a href="/springcloud/springcloud.html" class="nav-link">
+  Springcloud
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Openfeign</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/springcloud/openfeign/openfeign.html" aria-current="page" class="active sidebar-link">Spring CLoud使用方式</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/springcloud/openfeign/openfeign.html#基本原理" class="sidebar-link">基本原理</a></li><li class="sidebar-sub-header"><a href="/springcloud/openfeign/openfeign.html#不使用注册中心" class="sidebar-link">不使用注册中心</a></li><li class="sidebar-sub-header"><a href="/springcloud/openfeign/openfeign.html#扩展" class="sidebar-link">扩展</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/springcloud/openfeign/openfeign.html#使用熔断" class="sidebar-link">使用熔断</a></li></ul></li><li class="sidebar-sub-header"><a href="/springcloud/openfeign/openfeign.html#配置" class="sidebar-link">配置</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/springcloud/openfeign/openfeign.html#单服务配置" class="sidebar-link">单服务配置</a></li><li class="sidebar-sub-header"><a href="/springcloud/openfeign/openfeign.html#全局配置" class="sidebar-link">全局配置</a></li></ul></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="spring-cloud使用方式"><a href="#spring-cloud使用方式" class="header-anchor">#</a> Spring CLoud使用方式</h1> <h2 id="基本原理"><a href="#基本原理" class="header-anchor">#</a> 基本原理</h2> <blockquote><ol><li>通过@EnableFeignClients开启使用feignclient</li></ol> <ul><li><p>basePackages(扫描基础包)、basePackageClasses(扫描基础类)、value(作用类似于basePackages);如果没有basePackages，则将@EnableFeignClients注解类所在的包作为基础扫描包</p></li> <li><p>defaultConfiguration：默认配置</p></li> <li><p>clients：被@FeignClient修饰的类集合，如果不为空，则不会再扫描包</p></li></ul> <ol start="2"><li><p>扫描@EnableFeignClients的包下被@FeignClient修饰的类</p></li> <li><p>将@FeignClient修改的类转换为BeanDefinition，同时根据配置的url,name,serviceId等，填充调用的URL，检查是否为接口</p></li> <li><p>调用bean时，根据url获取调用地址</p></li></ol></blockquote> <h2 id="不使用注册中心"><a href="#不使用注册中心" class="header-anchor">#</a> 不使用注册中心</h2> <blockquote><ul><li>引入openfeign依赖</li></ul> <div class="language-java extra-class"><pre class="language-java"><code><span class="token generics"><span class="token punctuation">&lt;</span>dependency<span class="token punctuation">&gt;</span></span>
+   <span class="token generics"><span class="token punctuation">&lt;</span>groupId<span class="token punctuation">&gt;</span></span>org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>cloud<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">&gt;</span>
+   <span class="token generics"><span class="token punctuation">&lt;</span>artifactId<span class="token punctuation">&gt;</span></span>spring<span class="token operator">-</span>cloud<span class="token operator">-</span>starter<span class="token operator">-</span>openfeign<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>dependency<span class="token operator">&gt;</span>
+</code></pre></div></blockquote> <blockquote><ul><li>通过@FeignClient注解定义接口类</li></ul> <ol><li>name: 定义名称，如果没有配置url，则使用name作为服务名进行服务发现的依据，多用于有注册中心的时候</li> <li>url: 服务地址，可通过EL表达式注入配置文件中的值，例如：${openapi.auth.url}</li> <li>path: 可选项，接口前缀，类似于controller类上的requestMapping的值</li> <li>fallbackFactory：回调函数，用于配置熔断。需要配合熔断框架使用，例如sentinel、hytrix等</li></ol></blockquote> <blockquote><ul><li>定义具体调用的接口方法，和提供者的contrller写法相同，使用@GetMapping、@RequestBody等注解</li></ul></blockquote> <div class="language-java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@FeignClient</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">&quot;auth-user&quot;</span><span class="token punctuation">,</span> url <span class="token operator">=</span> <span class="token string">&quot;${openapi.auth.url}&quot;</span><span class="token punctuation">,</span> path <span class="token operator">=</span> <span class="token string">&quot;/user&quot;</span><span class="token punctuation">,</span> fallbackFactory <span class="token operator">=</span> <span class="token class-name">UserApiFallbackFactory</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">UserApi</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@GetMapping</span><span class="token punctuation">(</span><span class="token string">&quot;/getCurrentUserName&quot;</span><span class="token punctuation">)</span>
+    <span class="token class-name">String</span> <span class="token function">getCurrentUserName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+    <span class="token annotation punctuation">@PostMapping</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">&quot;/getAthUser&quot;</span><span class="token punctuation">)</span>
+    <span class="token class-name">String</span> <span class="token function">getAthUser</span><span class="token punctuation">(</span><span class="token annotation punctuation">@RequestBody</span> <span class="token class-name">AthUser</span> athUser<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="扩展"><a href="#扩展" class="header-anchor">#</a> 扩展</h2> <ul><li>如果使用@FeignClient实现动态配置URL，即从数据库中读取，而不是通过配置文件???
+<ul><li>思路一：通过修改Environment中属性的值，从而在获取占位符时，动态调整</li></ul></li></ul> <h3 id="使用熔断"><a href="#使用熔断" class="header-anchor">#</a> 使用熔断</h3> <blockquote><ul><li>熔断框架支持sentinel、hytrix等，这里以sentinel为例</li></ul></blockquote> <blockquote><ul><li>引入sentinel依赖</li></ul> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token comment">&lt;!--引入sentinel依赖--&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>com.alibaba.cloud<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-cloud-starter-alibaba-sentinel<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><ul><li>设置配置文件使用sentinel</li></ul> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token key atrule">feign</span><span class="token punctuation">:</span>
+ <span class="token key atrule">sentinel</span><span class="token punctuation">:</span>
+   <span class="token key atrule">enabled</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+</code></pre></div><ul><li>声明回调类，需要使用spring bean类</li></ul> <div class="language-java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@Component</span>
+<span class="token annotation punctuation">@Slf4j</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UserApiFallbackFactory</span> <span class="token keyword">implements</span> <span class="token class-name">FallbackFactory</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">UserApi</span><span class="token punctuation">&gt;</span></span> <span class="token punctuation">{</span>
+
+   <span class="token annotation punctuation">@Override</span>
+   <span class="token keyword">public</span> <span class="token class-name">UserApi</span> <span class="token function">create</span><span class="token punctuation">(</span><span class="token class-name">Throwable</span> cause<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+       <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">UserApi</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+           <span class="token annotation punctuation">@Override</span>
+           <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getCurrentUserName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+               log<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">&quot;获取当前用户名称异常&quot;</span><span class="token punctuation">,</span> cause<span class="token punctuation">)</span><span class="token punctuation">;</span>
+               <span class="token keyword">return</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+           <span class="token punctuation">}</span>
+
+           <span class="token annotation punctuation">@Override</span>
+           <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getAthUser</span><span class="token punctuation">(</span><span class="token class-name">AthUser</span> athUser<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+               log<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">&quot;获取当前用户异常&quot;</span><span class="token punctuation">,</span> cause<span class="token punctuation">)</span><span class="token punctuation">;</span>
+               <span class="token keyword">return</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+           <span class="token punctuation">}</span>
+       <span class="token punctuation">}</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>使用@feignClient引用回调</li></ul> <div class="language-java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@FeignClient</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">&quot;auth-user&quot;</span><span class="token punctuation">,</span> url <span class="token operator">=</span> <span class="token string">&quot;${openapi.auth.url}&quot;</span><span class="token punctuation">,</span> path <span class="token operator">=</span> <span class="token string">&quot;/user&quot;</span><span class="token punctuation">,</span> fallbackFactory <span class="token operator">=</span> <span class="token class-name">UserApiFallbackFactory</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span>
+</code></pre></div></blockquote> <h2 id="配置"><a href="#配置" class="header-anchor">#</a> 配置</h2> <blockquote><ul><li>推荐使用配置文件进行配置，简单灵活可读性高</li></ul></blockquote> <h3 id="单服务配置"><a href="#单服务配置" class="header-anchor">#</a> 单服务配置</h3> <h4 id="通过-feignclient配置"><a href="#通过-feignclient配置" class="header-anchor">#</a> 通过@FeignClient配置</h4> <blockquote><ul><li>通过@FeignClient指定配置，可对不同的服务提供不同的配置</li></ul></blockquote> <blockquote><ol><li>编写配置类</li></ol> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">OpenFeignConfig</span> <span class="token punctuation">{</span>
+
+
+   <span class="token comment">/**
+    * 声明openFeign的日志级别
+    *
+    * @return {@link Logger.Level}
+    */</span>
+   <span class="token annotation punctuation">@Bean</span>
+   <span class="token keyword">public</span> <span class="token class-name">Logger<span class="token punctuation">.</span>Level</span> <span class="token function">getOpenFeignLoggerLevel</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+       <span class="token keyword">return</span> <span class="token class-name">Logger<span class="token punctuation">.</span>Level</span><span class="token punctuation">.</span><span class="token constant">FULL</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><ol start="2"><li>声明配置</li></ol> <div class="language-java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@FeignClient</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">&quot;auth-user&quot;</span><span class="token punctuation">,</span> url <span class="token operator">=</span> <span class="token string">&quot;${openapi.auth.url}&quot;</span><span class="token punctuation">,</span> path <span class="token operator">=</span> <span class="token string">&quot;/user&quot;</span><span class="token punctuation">,</span> fallbackFactory <span class="token operator">=</span> <span class="token class-name">UserApiFallbackFactory</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span> configuration <span class="token operator">=</span> <span class="token class-name">OpenFeignConfig</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span>
+
+</code></pre></div></blockquote> <h4 id="配置文件中配置"><a href="#配置文件中配置" class="header-anchor">#</a> 配置文件中配置</h4> <blockquote><div class="language-yml extra-class"><pre class="language-yml"><code><span class="token key atrule">feign</span><span class="token punctuation">:</span>
+ <span class="token key atrule">sentinel</span><span class="token punctuation">:</span>
+   <span class="token key atrule">enabled</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+ <span class="token key atrule">client</span><span class="token punctuation">:</span>
+   <span class="token key atrule">config</span><span class="token punctuation">:</span>
+     <span class="token key atrule">auth-user</span><span class="token punctuation">:</span>
+       <span class="token key atrule">loggerLevel</span><span class="token punctuation">:</span> NONE
+</code></pre></div><ul><li>其中，auth-user为@feignClient中配置的name值，用于标识针对哪个接口进行配置</li> <li>配置文件的优先级高于@FeignClient的配置</li></ul></blockquote> <h3 id="全局配置"><a href="#全局配置" class="header-anchor">#</a> 全局配置</h3> <h4 id="bean注入配置形式"><a href="#bean注入配置形式" class="header-anchor">#</a> bean注入配置形式</h4> <ul><li>方式一</li></ul> <div class="language-java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@Configuration</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">OpenFeignConfig</span> <span class="token punctuation">{</span>
+
+
+    <span class="token comment">/**
+     * 声明openFeign的日志级别
+     *
+     * @return {@link Logger.Level}
+     */</span>
+    <span class="token annotation punctuation">@Bean</span>
+    <span class="token keyword">public</span> <span class="token class-name">Logger<span class="token punctuation">.</span>Level</span> <span class="token function">getOpenFeignLoggerLevel</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token class-name">Logger<span class="token punctuation">.</span>Level</span><span class="token punctuation">.</span><span class="token constant">FULL</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>方式二</li></ul> <blockquote><ul><li>增加配置类</li></ul> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">OpenFeignConfig</span> <span class="token punctuation">{</span>
+
+
+   <span class="token comment">/**
+    * 声明openFeign的日志级别
+    *
+    * @return {@link Logger.Level}
+    */</span>
+   <span class="token annotation punctuation">@Bean</span>
+   <span class="token keyword">public</span> <span class="token class-name">Logger<span class="token punctuation">.</span>Level</span> <span class="token function">getOpenFeignLoggerLevel</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+       <span class="token keyword">return</span> <span class="token class-name">Logger<span class="token punctuation">.</span>Level</span><span class="token punctuation">.</span><span class="token constant">FULL</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>在<code>@EnableFeignClients</code>中声明默认配置</li></ul> <div class="language-java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@EnableFeignClients</span><span class="token punctuation">(</span>defaultConfiguration <span class="token operator">=</span> <span class="token class-name">OpenFeignConfig</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span>
+</code></pre></div></blockquote> <h4 id="配置文件配置"><a href="#配置文件配置" class="header-anchor">#</a> 配置文件配置</h4> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token key atrule">feign</span><span class="token punctuation">:</span>
+  <span class="token key atrule">sentinel</span><span class="token punctuation">:</span>
+    <span class="token key atrule">enabled</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">client</span><span class="token punctuation">:</span>
+    <span class="token key atrule">config</span><span class="token punctuation">:</span>
+      <span class="token key atrule">default</span><span class="token punctuation">:</span>
+        <span class="token key atrule">loggerLevel</span><span class="token punctuation">:</span> NONE
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.6e5730b0.js" defer></script><script src="/assets/js/2.733019b2.js" defer></script><script src="/assets/js/8.caa05805.js" defer></script>
+  </body>
+</html>
