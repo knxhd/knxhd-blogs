@@ -4,6 +4,7 @@ module.exports = {
     description: 'YYY',
     base: '/knxhd-blogs/',
     dest: 'dist',
+    theme: 'reco',
     plugins: [
         ["vuepress-plugin-auto-sidebar", {
             sidebarDepth: 5,
@@ -13,6 +14,32 @@ module.exports = {
         }]
     ],
     themeConfig: {
-        nav
+        "nav": [
+            {
+                "text": "主页",
+                "link": "/",
+                "icon": "reco-home"
+            }, {
+                "text": "时间轴",
+                "link": "/timeline/",
+                "icon": "reco-date"
+            }, {
+                "text": "关于",
+                "link": "/about/",
+                "icon": "reco-account"
+            }
+        ],
+        "type": "blog",
+        "sidebar": true,
+        "blogConfig": {
+            "category": {
+                "location": 2,
+                "text": "博客"
+            },
+            "tag": {
+                "location": 3,
+                "text": "标签"
+            }
+        }
     }
 }
