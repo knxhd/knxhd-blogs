@@ -31,6 +31,7 @@ module.exports = {
         ],
         "type": "blog",
         "sidebar": true,
+        "sidebarDepth": 6,
         "blogConfig": {
             "category": {
                 "location": 2,
