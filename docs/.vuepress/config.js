@@ -1,8 +1,15 @@
 const nav = require("./nav.js");
 module.exports = {
     title: '柯南小海盗的博客',
-    description: 'YYY',
+    description: '柯南小海盗的博客',
     base: '/knxhd-blogs/',
+    head:[
+        [
+            'link', {
+                rel: 'icon', href: '/images/icon.jpeg'
+            }
+        ]
+    ],
     dest: 'dist',
     theme: 'reco',
     plugins: [

@@ -5,14 +5,59 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78b3629c-b226-494b-85a3-8f10cda1e448" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/images/Spark核心组件.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/blogs/大数据/Spark.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/images/icon.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/blogs/大数据/scala/Scala.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/blogs/大数据/spark/Spark.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/css/0.styles.26f589b3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/fonts/iconfont.938fa69e.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/fonts/iconfont.ecabaf00.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/Spark核心模块.515d30c7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/bg.2cfdbb33.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/js/1.222166f1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/js/10.3e62ec87.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/js/11.1519d235.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/js/12.b7b6919e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/js/13.5e76ec87.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/js/14.c86d3344.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/js/15.c5428aa2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/js/16.40f45161.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/js/3.cdf25a3c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/js/4.4037a9e3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/js/5.6c6618e2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/js/6.879aea66.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/js/7.533b4d77.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/js/8.6514d16c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/js/9.502ceb36.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/js/app.7b80371a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/blogs/NLP/大模型/langchain.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/blogs/大数据/Spark.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/blogs/微服务/openfeign/openfeign.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/blogs/微服务/sentinel/sentinel.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/blogs/微服务/springcloud.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/blogs/数据库/elasticSearch/查询接口.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/categories/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/categories/大数据/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/categories/微服务/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/categories/数据库/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/Spark核心模块.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/tag/Spark/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/tag/SpringCloud/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/tag/elasticSearch/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/tag/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/tag/微服务/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/timeline/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/blogs/大数据/Spark.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -35,6 +80,9 @@
   </component>
   <component name="MavenRunner">
     <option name="vmOptions" value="-DarchetypeCatalog=internal" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="2SiuOlXKqGQpPMgG45bNpoIoM2f" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -70,6 +118,8 @@
       <recent name="E:\knxhd-blogs\docs\sentinel" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/blogs/大数据/spark" />
+      <recent name="$PROJECT_DIR$/docs/.vuepress/public/images" />
       <recent name="E:\knxhd-blogs\docs\md" />
       <recent name="E:\knxhd-blogs\docs" />
       <recent name="E:\knxhd-blogs\docs\springcloud" />
@@ -151,7 +201,8 @@
       <workItem from="1690595410095" duration="257000" />
       <workItem from="1690612601819" duration="578000" />
       <workItem from="1690619727452" duration="38000" />
-      <workItem from="1698454669356" duration="1810000" />
+      <workItem from="1698454669356" duration="3504000" />
+      <workItem from="1698459020865" duration="1323000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1689643808836</created>
