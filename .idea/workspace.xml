@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78b3629c-b226-494b-85a3-8f10cda1e448" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/springcloud/openfeign/openfeign.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/springcloud/openfeign/openfeign.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/images/Spark核心组件.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/blogs/大数据/Spark.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +54,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="javascript.nodejs.core.library.configured.version" value="14.8.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.18.54" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../blogs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs/.vuepress/public/images" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.0" />
@@ -63,6 +64,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/.vuepress/public/images" />
       <recent name="E:\knxhd-blogs\blogs" />
       <recent name="E:\knxhd-blogs\docs\openfeign" />
       <recent name="E:\knxhd-blogs\docs\sentinel" />
@@ -82,6 +84,17 @@
     </option>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <selectedOptions>
         <option name="module.classpath" />
@@ -138,6 +151,7 @@
       <workItem from="1690595410095" duration="257000" />
       <workItem from="1690612601819" duration="578000" />
       <workItem from="1690619727452" duration="38000" />
+      <workItem from="1698454669356" duration="1810000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1689643808836</created>
