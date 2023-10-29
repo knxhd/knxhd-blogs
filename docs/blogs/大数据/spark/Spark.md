@@ -38,5 +38,15 @@ tags:
 >- [Scala学习路线](../scala/Scala.md)
 >- Scala和Spark版本对应(可查看Spark官网进行查看版本)：https://mvnrepository.com/artifact/org.apache.spark/spark-core
 
-### Scala
+### Spark
+
+>使用Docker搭建集群模式进行测试 (一主二从)
+>
+>```shell
+>docker pull bitnami/spark:3
+>```
+
+
+
+
 

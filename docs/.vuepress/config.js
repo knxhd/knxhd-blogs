@@ -18,7 +18,8 @@ module.exports = {
             collapse: {
                 open: true
             }
-        }]
+        }],
+        ['vuepress-plugin-code-copy', true]
     ],
     themeConfig: {
         "nav": [
