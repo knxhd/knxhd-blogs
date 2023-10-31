@@ -1,7 +1,7 @@
 const nav = require("./nav.js");
 module.exports = {
-    title: '柯南小海盗的博客',
-    description: '柯南小海盗的博客',
+    title: '柯南小海盗',
+    description: '柯南小海盗',
     base: '/knxhd-blogs/',
     head:[
         [
@@ -19,7 +19,12 @@ module.exports = {
                 open: true
             }
         }],
-        ['vuepress-plugin-code-copy', true]
+        ['vuepress-plugin-code-copy', true],
+        ['cursor-effects', {
+            size: 2, // size of the particle, default: 2
+            shape: 'circle', // ['star' | 'circle'], // shape of the particle, default: 'star'
+            zIndex: 999999999, // z-index property of the canvas, default: 999999999
+            }]
     ],
     themeConfig: {
         "nav": [

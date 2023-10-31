@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /images/icon.jpeg
-heroText: 柯南小海盗的博客
+heroText: 柯南小海盗
 tagline: 路漫漫兮其修远，吾将上下而求索
 actionText: 开始探索之旅 →
 actionLink: /zh/guide/
