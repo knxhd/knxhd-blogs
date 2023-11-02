@@ -3,7 +3,7 @@ module.exports = {
     title: '柯南小海盗',
     description: '柯南小海盗',
     base: '/knxhd-blogs/',
-    head:[
+    head: [
         [
             'link', {
                 rel: 'icon', href: '/images/icon.jpeg'
@@ -24,7 +24,7 @@ module.exports = {
             size: 2, // size of the particle, default: 2
             shape: 'circle', // ['star' | 'circle'], // shape of the particle, default: 'star'
             zIndex: 999999999, // z-index property of the canvas, default: 999999999
-            }]
+        }]
     ],
     themeConfig: {
         "nav": [
@@ -32,6 +32,12 @@ module.exports = {
                 "text": "主页",
                 "link": "/",
                 "icon": "reco-home"
+            }, {
+                text: '读书笔记',
+                link: '/读书笔记/',
+                items: [
+                    { text: '明朝那些事儿', link: '/blogs/读书笔记/明朝那些事儿.html' }
+                ]
             }, {
                 "text": "时间轴",
                 "link": "/timeline/",

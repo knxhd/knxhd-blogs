@@ -3,7 +3,7 @@ title: 提示词工程-基础知识
 date: '2023-09-28 08:00:00'
 sidebar: 'auto'
 categories:
- - NLP
+ - 大数据
 tags:
  - 大模型
 ---
