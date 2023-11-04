@@ -131,6 +131,14 @@ docker-compose up -d
 | 18080 | Spark历史服务器端口是18080                                  | 配置方式在spark-defaults.conf加一行<br/>spark.history.ui.port    18080 |
 | 6066  | Spark外部服务端口是6066，这个端口有被黑客攻击的漏洞建议关闭 | 关闭方式在spark-defaults.conf加一行<br/>spark.master.rest.enabled         false<br/>修改方式:<br/>spark.master.rest.port               16066 |
 
+## 基础概念
+
+### HDFS
+
+>- HDFS即 Hadoop Distributed File System，即Hadoop的分布式文件系统
+
+### RDD
+
 
 
 ## 快速上手
