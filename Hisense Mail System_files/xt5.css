@@ -1,0 +1,213 @@
+
+.ke-container-xt5 .ke-toolbar {
+position: relative;
+border-bottom: 1px solid #e7e7e7;
+background-color: #fff;
+padding: 5px;
+overflow: hidden;
+}
+.ke-container-xt5 .ke-toolbar .ke-outline {
+margin-right: 5px;
+padding: 3px;
+border: none;
+border-radius: 3px;
+background-color: transparent;
+overflow: hidden;
+cursor: pointer;
+}
+.ke-container-xt5 .ke-toolbar .ke-disabled {
+cursor: not-allowed;
+}
+.ke-container-xt5 .ke-toolbar .ke-on {
+background: #f0f0f0;
+}
+.ke-edit-textarea {
+font-size: 13px;
+}
+.ke-menu {
+border: 1px solid #ddd;
+background-color: #fff;
+color: #333;
+}
+.ke-menu-item {
+border: none;
+background-color: #fff;
+color: #333;
+}
+.ke-menu-item-on {
+border: none;
+background-color: #f0f0f0;
+}
+.ke-colorpicker {
+border: 1px solid #ddd;
+background-color: #fff;
+color: #333;
+}
+.ke-dialog-mask {
+opacity: 0.3;
+background-color: #000;
+}
+.ke-dialog-xt5 {
+height: auto !important;
+animation: fadein 0.3s;
+}
+@keyframes fadein {
+from {
+opacity: 0;
+}
+to {
+opacity: 1;
+}
+}
+.ke-dialog-loading-content {
+background: none;
+}
+.ke-dialog-body, .ke-dialog-header, .ke-tabs, .ke-button, .ke-dialog-footer {
+font-family: Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+}
+.ke-dialog-content {
+margin: 0;
+padding: 0;
+border: 2px solid #a0a0a0;
+box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+border-radius: 2px;
+outline: none;
+}
+.ke-dialog-icon-close {
+position: absolute;
+font-family: "CM_XT5" !important;
+font-style: normal;
+-webkit-font-smoothing: antialiased;
+top: 13px;
+right: 13px;
+font-size: 24px;
+line-height: 20px;
+font-weight: bold;
+color: #ccc;
+text-decoration: none;
+background: none;
+}
+.ke-dialog-icon-close:after {
+content: "\e64f";
+}
+.ke-dialog-header {
+height: 20px;
+line-height: 20px;
+padding: 10px;
+font-size: 16px;
+border-bottom: 1px solid #ddd;
+font-weight: bold;
+background: #fafafa;
+}
+.ke-dialog-footer {
+width: auto!important;
+line-height: 30px;
+border-top: 1px solid #ddd;
+background: #fafafa;
+padding: 2px 5px;
+}
+.ke-upload-area {
+width: auto !important;
+}
+.ke-button-common {
+color: #555;
+background-color: #f5f6f7;
+position: relative;
+display: inline-block;
+height: 28px;
+line-height: 27px;
+text-align: center;
+text-decoration: none;
+vertical-align: middle;
+cursor: pointer;
+font-size: 14px;
+font-family: inherit;
+font-weight: normal;
+border-radius: 2px;
+background-image: none;
+white-space: nowrap;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+outline: none;
+}
+.ke-button-common:not(.ke-button):hover {
+color: #555555;
+background-color: #f5f6f7;
+border-color: #b2b2b2;
+}
+.ke-dialog-row input[name='url'] + span {
+display: none;
+}
+.ke-dialog-row label {
+margin-right: 5px;
+text-align: center;
+}
+.ke-button {
+min-width:54px;
+border: 1px solid #d9d9d9;
+padding: 0 5px;
+left: 0;
+top: -1px;
+}
+.ke-tabs {
+border-bottom: 1px solid #ddd;
+margin: 0 -20px 20px -20px;
+padding: 0 20px;
+}
+.ke-tabs-li {
+font-size: 14px;
+margin: 0 5px 0 0;
+border: none;
+background: none;
+}
+.ke-input-text {
+border-color: #ddd;
+transition: border-color .2s ease,color .2s ease;
+}
+.ke-input-text:focus,
+.ke-input-text:active {
+border-color: #5bc0de;
+}
+.ke-shadow {
+box-shadow: 1px 1px 3px #ddd;
+-moz-box-shadow: 1px 1px 3px #ddd;
+-webkit-box-shadow: 1px 1px 3px #ddd;
+}
+.ke-container-xt5 .ke-toolbar-icon-url,
+.ke-menu-xt5 .ke-toolbar-icon-url, .ke-container-xt5 .ke-toolbar-icon {
+font-family:"CM_XT5" !important;
+font-size:16px;
+font-style:normal;
+line-height: 1;
+width: 16px;
+height: 16px;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+background-image: none;
+}
+.ke-colorpicker-xt5 .ke-colorpicker-cell-top {
+display: none;
+}
+.ke-container-xt5 .ke-icon-bold:before {content: "\e69f";}
+.ke-container-xt5 .ke-icon-italic:before {content: "\e6a5";}
+.ke-container-xt5 .ke-icon-underline:before {content: "\e69c";}
+.ke-container-xt5 .ke-icon-fontname:before {content: "\e6a3";}
+.ke-container-xt5 .ke-icon-fontsize:before {content: "\e6a2";}
+.ke-container-xt5 .ke-icon-forecolor:before {content: "\e6a1";}
+.ke-container-xt5 .ke-icon-hilitecolor:before {content: "\e6a0";}
+.ke-container-xt5 .ke-icon-image:before {content: "\e62e";}
+.ke-container-xt5 .ke-icon-plug-align:before {content: "\e69e";}
+.ke-container-xt5 .ke-icon-plug-order:before {content: "\e69b";}
+.ke-container-xt5 .ke-icon-plug-indent:before {content: "\e6a4";}
+.ke-container-xt5 .ke-icon-lineheight:before {content: "\e69d";}
+.ke-menu-xt5 .ke-icon-checked:before {content: "\e655";}
+.ke-menu-xt5 .ke-icon-checked {color: #0079BD;}
+.ke-menu-xt5 .plug-align-justifyleft:before {content: "\e66a";}
+.ke-menu-xt5 .plug-align-justifycenter:before {content: "\e669";}
+.ke-menu-xt5 .plug-align-justifyright:before {content: "\e66b";}
+.ke-menu-xt5 .plug-order-insertorderedlist:before {content: "\e678";}
+.ke-menu-xt5 .plug-order-insertunorderedlist:before {content: "\e679";}
+.ke-menu-xt5 .plug-indent-indent:before {content: "\e677";}
+.ke-menu-xt5 .plug-indent-outdent:before {content: "\e676";}
