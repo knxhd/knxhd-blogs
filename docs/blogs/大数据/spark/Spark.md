@@ -1,6 +1,6 @@
 ---
 title: Spark基础知识
-date: '2023-10-27 08:00:00'
+date: '2023-11-05 16:00:00'
 sidebar: 'auto'
 sidebarDepth: 5
 categories:
@@ -131,15 +131,115 @@ docker-compose up -d
 | 18080 | Spark历史服务器端口是18080                                  | 配置方式在spark-defaults.conf加一行<br/>spark.history.ui.port    18080 |
 | 6066  | Spark外部服务端口是6066，这个端口有被黑客攻击的漏洞建议关闭 | 关闭方式在spark-defaults.conf加一行<br/>spark.master.rest.enabled         false<br/>修改方式:<br/>spark.master.rest.port               16066 |
 
+## 运行模式
+
+>spark有四种不同的运行模式，分别为：local(本地模式)、Standalone、YARN、Mesos
+
+### local
+
+>- lcoa模式，就是在计算过程中不会使用集群中的计算资源，一台机器单打独斗，故一般用于教学，调试，演示等，
+>- 即：只需要一台机器，在服务器上部署Spark后，将任务提交到Spark上即可
+>
+
+### Standalone
+
+> Standalone模式，即采用Spark自带的集群模式运行，也就是独立的部署模式，Spark的独立部署模式也就是主从模式。即至少有两个节点，即master和worker节点
+
+#### 部署方式
+
+1. 三台服务器，服务器信息如下：
+
+| 服务器域名             | 环境     |
+| ---------------------- | -------- |
+| node01，最为master节点 | jdk8环境 |
+| node02，作为worker节点 | jdk8环境 |
+| node03，作为worker节点 | jdk8环境 |
+
+2. 三台服务器设置spark，也可只设置master，通过xsync或scp将spark配置后的文件夹分发到另外2台服务器
+
+>1. 修改slaves,，添加服务器节点，配置文件位于 `conf/slaves.template`，slaves.template为示例，需要将`.template`去掉，其中，node01,node02,node03为节点服务器计算机名,即域名
+>
+>```
+>node01
+>node02
+>node03
+>```
+
+>2. 修改`spark-env.sh`文件，添加`JAVA_HOME`以及集群对应的master节点名，同理，对应的文件名为：`conf/spark-env.sh.template`
+>
+>```shell
+>export JAVA_HMOE=/usr/local/softwares/jdk1.8.0_202
+>SPARK_MASTER_HOST=node01
+>SPARK_MASTER_PORT=7077
+>```
+
+>3. 由于使用`start-all.sh`命令启动所有的服务器节点，原理是通过此脚本，会运行每个节点上的启动命令，因此，需要设置免密执行shell的操作，否则，每次启动都需要输入密码。start-all.sh源码如下：
+>
+>   ```shell
+>   #!/usr/bin/env bash
+>   
+>   #
+>   # Licensed to the Apache Software Foundation (ASF) under one or more
+>   # contributor license agreements.  See the NOTICE file distributed with
+>   # this work for additional information regarding copyright ownership.
+>   # The ASF licenses this file to You under the Apache License, Version 2.0
+>   # (the "License"); you may not use this file except in compliance with
+>   # the License.  You may obtain a copy of the License at
+>   #
+>   #    http://www.apache.org/licenses/LICENSE-2.0
+>   #
+>   # Unless required by applicable law or agreed to in writing, software
+>   # distributed under the License is distributed on an "AS IS" BASIS,
+>   # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+>   # See the License for the specific language governing permissions and
+>   # limitations under the License.
+>   #
+>   
+>   # Start all spark daemons.
+>   # Starts the master on this node.
+>   # Starts a worker on each node specified in conf/slaves
+>   
+>   if [ -z "${SPARK_HOME}" ]; then
+>     export SPARK_HOME="$(cd "`dirname "$0"`"/..; pwd)"
+>   fi
+>   
+>   # Load the Spark configuration
+>   . "${SPARK_HOME}/sbin/spark-config.sh"
+>   
+>   # Start Master
+>   "${SPARK_HOME}/sbin"/start-master.sh
+>   
+>   # Start Workers
+>   "${SPARK_HOME}/sbin"/start-slaves.sh
+>   ```
+
+>4. 启动集群，使用`sbin/start-all.sh`命令启动集群
+>5. 设置[ssh免密登录](../../运维/Linux.md#SSH免密登录)，不然执行ssh时，需要使用密码登录
+>
+>5. 需要开发一下端口对应的防火墙，避免出现端口访问不到的问题。需要开放的端口。[防火墙设置](../../运维/Linux.md#防火墙)
+>   - 8080(master的web UI监控端口)
+>   - 8081(worker的Web UI监控端口)
+>   - 7077(集群的节点通讯端口)
+>6. 访问master节点的web界面，查看集群状态。即：`http:xxxx:8080`
+
+>7. 提交任务到master上，则可以使用集群来做对应的计算
+
 ## 基础概念
 
 ### HDFS
 
 >- HDFS即 Hadoop Distributed File System，即Hadoop的分布式文件系统
 
-### RDD
+### driver和executor进程
 
+>- dirver: 负责任务调用，类似于 ApplicationMaster，负责将用户写的程序转换为一个job。
+>- executor：负责执行spark中的具体任务
+>- 在Standalone和yarn模式中都会存在
 
+### master和worker节点
+
+>- 搭建spark集群时，会有2种不同的节点，即master和worker节点，master节点负责向worker节点提交任务和管理worker节点，worker节点和master节点进行通讯，并管理excutor进程
+>- master和worker只有standalone模式才会有
 
 ## 快速上手
 
