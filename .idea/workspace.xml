@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b3629c-b226-494b-85a3-8f10cda1e448" name="Default Changelist" comment="spark更新" />
+    <list default="true" id="78b3629c-b226-494b-85a3-8f10cda1e448" name="Default Changelist" comment="spark更新">
+      <change afterPath="$PROJECT_DIR$/docs/blogs/大模型/大模型.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/blogs/大模型/GPU.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/blogs/大模型/GPU.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/blogs/大模型/大模型计算为啥需要GPU.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/blogs/大模型/大模型计算为啥需要GPU.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -167,7 +171,7 @@
       <workItem from="1690619727452" duration="38000" />
       <workItem from="1698454669356" duration="3504000" />
       <workItem from="1698459020865" duration="19627000" />
-      <workItem from="1704507072484" duration="354000" />
+      <workItem from="1704507072484" duration="658000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1689643808836</created>
