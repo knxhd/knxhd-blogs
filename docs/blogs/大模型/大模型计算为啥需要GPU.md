@@ -9,16 +9,14 @@ tags:
 ---
 
 ## 冯诺依曼架构
-
-![冯·诺依曼架构](../../.vuepress/public/images/冯·诺依曼架构.png)
+<img src="../../.vuepress/public/images/冯·诺依曼架构.png" alt="冯诺依曼">
 
 >- 现代计算机是基于冯诺依曼架构的。在冯诺依曼架构中，包括输入设备、寄存器、控制器和运算器、以及输出设备。通过输入设备输入数据后，将数据存储到寄存器中，然后寄存器中的数据交给控制器进行调度，然后交给运算器做相应的计算，随后将运算结果通过输出设备输出。
 >- CUP又叫中央处理器，包括控制器和运算器两个部分，负责数据和运算的控制调度和计算。
 
 ## GPU和CPU
 
-![cpu和gpu](../../.vuepress/public/images/cpu和gpu.png)
-
+<img src="../../.vuepress/public/images/cpu和gpu.png" alt="CPU和GPU">
 ### CPU
 
 >- CPU和GPU本质上是一样的，只是侧重的任务不同。CPU是计算机中的核心部分，主要负责处理计算器通用的运算和控制，CPU的内核(包括了ALU(算数逻辑运算))数量比较少，最多只有几十个。但是，CPU有大量的缓存(Cache)和复杂的控制器(CU)。
