@@ -17,6 +17,9 @@ tags:
 ## GPU和CPU
 
 <img src="../../.vuepress/public/images/cpu和gpu.png" alt="CPU和GPU">
+
+
+
 ### CPU
 
 >- CPU和GPU本质上是一样的，只是侧重的任务不同。CPU是计算机中的核心部分，主要负责处理计算器通用的运算和控制，CPU的内核(包括了ALU(算数逻辑运算))数量比较少，最多只有几十个。但是，CPU有大量的缓存(Cache)和复杂的控制器(CU)。
