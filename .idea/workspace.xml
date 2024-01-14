@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78b3629c-b226-494b-85a3-8f10cda1e448" name="Default Changelist" comment="spark更新">
-      <change afterPath="$PROJECT_DIR$/docs/blogs/大模型/大模型.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/blogs/大模型/GPU.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/blogs/大模型/GPU.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/blogs/大模型/大模型计算为啥需要GPU.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/blogs/大模型/大模型计算为啥需要GPU.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/images/bg.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/blogs/java/JVM.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/blogs/java/Spring.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/blogs/java/java基础知识.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/blogs/java/多线程和高并发/JUC.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/blogs/java/多线程和高并发/并发编程.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +25,7 @@
       <list>
         <option value="JavaScript File" />
         <option value="Vue Single File Component" />
+        <option value="markword" />
       </list>
     </option>
   </component>
@@ -125,21 +129,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="dev" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="npm.dev" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SshConsoleOptionsProvider">
@@ -172,6 +161,9 @@
       <workItem from="1698454669356" duration="3504000" />
       <workItem from="1698459020865" duration="19627000" />
       <workItem from="1704507072484" duration="658000" />
+      <workItem from="1705067419290" duration="2590000" />
+      <workItem from="1705191022553" duration="561000" />
+      <workItem from="1705193844154" duration="1266000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1689643808836</created>
@@ -233,11 +225,24 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -249,5 +254,9 @@
     <MESSAGE value="修改 .gitignore" />
     <MESSAGE value="文档修改" />
     <option name="LAST_COMMIT_MESSAGE" value="文档修改" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
