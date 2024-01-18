@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78b3629c-b226-494b-85a3-8f10cda1e448" name="Default Changelist" comment="spark更新">
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -158,7 +159,7 @@
       <workItem from="1704507072484" duration="658000" />
       <workItem from="1705067419290" duration="2590000" />
       <workItem from="1705191022553" duration="561000" />
-      <workItem from="1705193844154" duration="5576000" />
+      <workItem from="1705193844154" duration="5929000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1689643808836</created>
