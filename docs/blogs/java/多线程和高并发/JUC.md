@@ -129,3 +129,4 @@ public synchronized static void sale() {
 >-  默认为非公平锁，可传入参数到构造器中，制作公平锁
 >- 可中断锁
 >- 可重入锁
+
