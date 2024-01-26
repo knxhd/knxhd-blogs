@@ -72,3 +72,60 @@ tags:
 
 ## JWT令牌
 
+>- JWT就是一个加密后的字符串，用于权限校验时的校验。
+>- JWT(Json Web Token)是一种为了在网络传输过程中的一种执行标准。
+>- JWT通常是一个字符串，用来进行身份认证的凭证，分为三部分，头部、荷载和签证。
+
+## Spring Security快速开始
+
+### 引入依赖
+
+```xml
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-security</artifactId>
+</dependency>
+```
+
+
+
+## Spring Securty执行流程
+
+### 1. 自动配置
+
+- 在SpringBoot启动后，会自动装配Spring Security中的参数，通过`UserDetailsServiceAutoConfiguration`可以做自动配置，深入到这个类的源码，可以看到自动配置的参数，同时，我们可以把默认的用户名和密码配置到yml文件中。
+
+- Spring Security校验的调用链为如下：
+
+  ```java
+   WebAsyncManagerIntegrationFilter
+    SecurityContextPersistenceFilter
+    HeaderWriterFilter
+    CsrfFilter
+    LogoutFilter
+    UsernamePasswordAuthenticationFilter
+    DefaultLoginPageGeneratingFilter
+    DefaultLogoutPageGeneratingFilter
+    BasicAuthenticationFilter
+    RequestCacheAwareFilter
+    SecurityContextHolderAwareRequestFilter
+    AnonymousAuthenticationFilter
+    SessionManagementFilter
+    ExceptionTranslationFilter
+    FilterSecurityInterceptor
+  ]
+  ************************************************************
+  ```
+
+  
+
+### 1. 系统启动时，Spring Security做了什么操作
+
+>1. 在SpringBoot初始化时，完成Spring Security的配置文件的加载操作
+>2. `DelegatingFilterProxy`在系统启动时，会完成初始化操作
+>3. `DelegatingFilterProxy`获取代理的真实对象
+
+### 2. 第一次请求时，Spring Security的处理流程
+
+
+
