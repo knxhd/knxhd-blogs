@@ -3,7 +3,7 @@ title: Docker安装和配置
 date: '2024/1/26 22:01'
 sidebar: 'auto'
 categories:
- - 运维
+- 扩展知识
 tags:
  - Docker
 ---
@@ -95,6 +95,4 @@ sudo rm -rf /var/lib/containerd
 #### Docker是如何工作的
 
 Docker是一个client-server结构的系统，Docker的守护进程运行在主机上，通过Socket从客户端访问。DocerServer接收到client命令后，执行对应的命令。
-
-## Docker常用命令
 

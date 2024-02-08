@@ -3,7 +3,7 @@ title: K8s整体架构
 date: '2024/1/26 21:36'
 sidebar: 'auto'
 categories:
- - 运维
+- 扩展知识
 tags:
  - k8s
 ---

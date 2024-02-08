@@ -3,7 +3,7 @@ title: Linux命令
 date: '2023-10-27 08:00:00'
 sidebar: 'auto'
 categories:
- - 运维
+- 扩展知识
 tags:
  - Linux
 ---
