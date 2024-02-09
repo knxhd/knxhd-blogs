@@ -1,6 +1,6 @@
 ---
 title: Python基础知识学习
-date: '2025-01-20 14:00:00'
+date: '2024-01-20 14:00:00'
 sidebar: 'auto'
 categories:
  - Python

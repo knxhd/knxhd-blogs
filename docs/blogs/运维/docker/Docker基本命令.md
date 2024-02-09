@@ -468,6 +468,30 @@ docker cp 容器id:容器内路径 主机外的路径
 
 >- 主机拷贝到容器内，可以用挂载的形式来做
 
+### 7. history：查看镜像是如何制作出来的
+
+>- 语法： `docker history 镜像名:tag`或 `docker history 镜像id`
+
+```shell
+[root@node01 ~]# docker history 89baefc697d9
+IMAGE          CREATED          CREATED BY                                       SIZE      COMMENT
+89baefc697d9   6 minutes ago    CMD ["/bin/sh" "-c" "/bin/bash"]                 0B        buildkit.dockerfile.v0
+<missing>      6 minutes ago    CMD ["/bin/sh" "-c" "echo '------------end--…   0B        buildkit.dockerfile.v0
+<missing>      6 minutes ago    CMD ["/bin/sh" "-c" "echo $MYOPATHY"]            0B        buildkit.dockerfile.v0
+<missing>      6 minutes ago    EXPOSE map[80/tcp:{}]                            0B        buildkit.dockerfile.v0
+<missing>      6 minutes ago    RUN /bin/sh -c yum -y install net-tools # bu…   14.7MB    buildkit.dockerfile.v0
+<missing>      6 minutes ago    RUN /bin/sh -c yum -y install vim # buildkit     66.3MB    buildkit.dockerfile.v0
+<missing>      6 minutes ago    RUN /bin/sh -c sed -i -e "s|#baseurl=http://…   8.78kB    buildkit.dockerfile.v0
+<missing>      6 minutes ago    RUN /bin/sh -c sed -i -e "s/mirrorlist=/#mir…   8.8kB     buildkit.dockerfile.v0
+<missing>      6 minutes ago    RUN /bin/sh -c cd /etc/yum.repos.d/ # buildk…   0B        buildkit.dockerfile.v0
+<missing>      26 minutes ago   WORKDIR /usr/local                               0B        buildkit.dockerfile.v0
+<missing>      26 minutes ago   ENV MYOPATHY=/usr/local                          0B        buildkit.dockerfile.v0
+<missing>      26 minutes ago   MAINTAINER tianluhua<tianlh0915@163.com>         0B        buildkit.dockerfile.v0
+<missing>      2 years ago      /bin/sh -c #(nop)  CMD ["/bin/bash"]             0B        
+<missing>      2 years ago      /bin/sh -c #(nop)  LABEL org.label-schema.sc…   0B        
+<missing>      2 years ago      /bin/sh -c #(nop) ADD file:805cb5e15fb6e0bb0…   231MB     
+```
+
 ##    例子
 
 ### 1. 安装nginx

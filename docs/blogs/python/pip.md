@@ -1,6 +1,6 @@
 ---
 title: pip的使用
-date: '2025-01-25 08:00:00'
+date: '2024-01-25 08:00:00'
 sidebar: 'auto'
 categories:
  - Python
