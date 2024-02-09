@@ -10,21 +10,34 @@ tags:
 
 ## 容器数据卷
 
+>- 官方文档：https://docs.docker.com/storage/volumes/
+
 ### 什么是容器数据卷:question:
 
 >- Docker是一个镜像，我们的数据存在容器中，如果容器删除后，则数据也会随之删除
 >- 因此，在使用Docker时，有些数据需要持久化到磁盘上，例如：Mysql数据库等
 >- 即卷技术其实就是目录的挂载，将容器内部的目录挂载到磁盘的路径
 
-### 使用数据卷
+## 数据卷挂载
 
-#### 使用`-v`命令进行挂载
+>- 数据卷挂载方式有2种，分别为 `-v`和 `--mount`。二者的区别为：`-v`命令比较简约，默认仅仅为 volume类型的挂载，而`--mount`则可以根据字段做进一步的自定义
+>- `-v`语法：`-v 主机路径/挂载名称:容器内路径:[容器内路径权限]`
+>  1. `主机路径/挂载名称`可以省略，省略后，则表示匿名挂载，挂载后的主机路径为`/var/lib/docker/volumes/随机字符串/_data`；`挂载名称`: 表示具名挂载方式，名称不能以`/`开头，否则为，指定路径挂载。此时默认路径为：`/var/lib/docker/volumes/挂载名称/_data`；`主机路径`：表示指定路径挂载，采用绝对路径方式
+>  2. 容器内路径权限可选，值为`ro`(read only，仅仅可读，此时只能通过主机来写入数据，容器内不可写入)，`rw`  即可读又可写
+>- --mount
+>  1. mount包含多个字段，分别为type、source(又叫src)、destination(又叫dst、target)、readonly、volume-opt
+>     - type：枚举值为：bind、volume、tmpfs
+>     - readonly为可选
+>     - volume-opt可选
+>  2. 语法：`--mount type=typeName,source=主机路径,target=容器内路径,[readonly]`
+
+### 使用`-v`命令进行挂载
 
 ```shell
 docker run -it -v 外部目录:容器内目录 镜像名称 /bin/bash
 ```
 
-##### 测试使用`-v`挂载方式
+#### 测试使用`-v`挂载方式
 
 ```shell
 # 新建容器并挂载目录
@@ -36,7 +49,7 @@ docker run -it -v 外部目录:容器内目录 镜像名称 /bin/bash
 >- 在磁盘中添加文件后，容器内部的目录也会自动同步文件和文件夹
 >- <font color="red">即使容器停止后，只要容器存在，则在容器外增加文件，容器内也会增加</font>
 
-### 实战Mysql挂载
+#### 实战Mysql挂载
 
 ```shell
 # 新建容器
@@ -72,6 +85,16 @@ drwxr-x---. 2 polkitd input       20 2月   7 17:48 test
 ```
 
 >- mysql需要设置默认的root密码，使用-e来设置基本的配置
+
+### 使用`--mount`挂载方式
+
+```shell
+docker run -d \
+  -it \
+  --name tmptest \
+  --mount type=tmpfs,destination=/app \
+  nginx:latest
+```
 
 ## 具名挂载和匿名挂载
 
@@ -368,6 +391,32 @@ local     mysqlconfig
 ]
 
 ```
+
+## 数据卷容器
+
+>- 官方文档：https://docs.docker.com/compose/compose-file/05-services/#volumes_from
+
+>- volume-from 命令可以实现多个容器的数据同步
+>- 多个容器的数据进行同步，例如：2个mysql数据的同步，即多个容器共享一个目录
+
+### 测试
+
+1. 启动一个容器并挂载
+
+```shell
+docker run -d --name mysql01 -p 3306:3306 -v /home/mysql/config:/etc/mysql/conf.d \
+-v /home/mysql/data:/var/lib/mysql \
+-e MYSQL_ROOT_PASSWORD=Root@123  mysql:5.7
+```
+
+2. 启动第二个容器并继承mysql01的挂载
+
+```shell
+docker run -d --name mysql02 -p 3306:3306 --volumes-from mysql01
+-e MYSQL_ROOT_PASSWORD=Root@123  mysql:5.7
+```
+
+>- 此时，在第二个容器启动后，则数据会在mysql02中会自动拷贝一份。删除mysql01的数据后，mysql02的数据不会丢失
 
 ## 拓展
 
