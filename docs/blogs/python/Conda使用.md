@@ -40,6 +40,21 @@ conda deactivate
 conda remove -n xxx --all
 ```
 
+### 关闭自动激活的base环境：
+
+```shell
+conda config --set auto_activate_base false
+
+## 同理，开启命令为
+conda config --set auto_activate_base true
+```
+
+### 删除环境
+
+```shell
+conda remove --name env_name --all
+```
+
 ## 安装依赖
 
 ### 安装OCC
