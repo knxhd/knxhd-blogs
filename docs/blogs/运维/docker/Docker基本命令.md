@@ -28,6 +28,8 @@ docker 命令 --help # 帮助信息
 可选项
 -a # 显示所有的镜像
 -q # 只显示镜像ID
+-f # 过滤，可模糊搜索，例如：
+docker images -f reference=cent*
 ```
 
 ### 2. docker search 搜索镜像
@@ -181,6 +183,10 @@ docker ps -a
 docker ps -n=?
 
  -q #只显示容器ID
+ 
+# docker支持通过正则表达式的形式搜索
+// 搜索name包含abnd的容器
+docker ps -f name=.*abnd.*
  
 ```
 
