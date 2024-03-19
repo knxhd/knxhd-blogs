@@ -142,3 +142,35 @@ scp localfile remote_username@remote_ip:remote_file
 | G/Shift+g | 跳到最后一行 |
 | gg        | 跳到第一行   |
 
+## shell脚本
+
+### 变量
+
+#### sh命令结果赋值
+
+```shell
+name=$(command)
+# 例如：
+container_id=$(docker ps -qf name=mysql)
+```
+
+#### 引用变量
+
+```shell
+${name}
+```
+
+### 日期
+
+```shell
+timeInfo=$(date "+%Y%m%d%H%M%S")
+```
+
+## 删除文件
+
+### 排除某些文件不删除
+
+```shell
+find * | grep -v '\(index.html\|static\)' | xargs rm -rf
+```
+

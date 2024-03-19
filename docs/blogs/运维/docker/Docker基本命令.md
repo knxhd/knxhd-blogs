@@ -473,6 +473,13 @@ docker cp 容器id:容器内路径 主机外的路径
 ```
 
 >- 主机拷贝到容器内，可以用挂载的形式来做
+>- 复制文件，则用点来表示，而不是*
+>
+>```shell
+>docker cp /dist/.  container_id:/home/ws/static
+>```
+>
+>
 
 ### 7. history：查看镜像是如何制作出来的
 
@@ -497,6 +504,20 @@ IMAGE          CREATED          CREATED BY                                      
 <missing>      2 years ago      /bin/sh -c #(nop)  LABEL org.label-schema.sc…   0B        
 <missing>      2 years ago      /bin/sh -c #(nop) ADD file:805cb5e15fb6e0bb0…   231MB     
 ```
+
+### 8. docker执行容器内命令
+
+>- 通过bash -c可执行多个，如果执行单个命令，可省略为：
+>
+>  ```shell
+>  docker exec container_id command
+>  ```
+
+```
+docker exec container_id bash -c "cd /home/ws/static/ && mv /home/ws/static/index.html ${timeInfo}bak/"
+```
+
+
 
 ##    例子
 
