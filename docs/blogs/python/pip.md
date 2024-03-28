@@ -1,5 +1,5 @@
 ---
-title: 4. pip的使用
+title: pip的使用
 date: '2024-01-25 08:00:00'
 sidebar: 'auto'
 categories:
