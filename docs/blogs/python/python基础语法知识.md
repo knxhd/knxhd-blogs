@@ -1,5 +1,5 @@
 ---
-title: python语法
+title: 2. python语法
 date: '2024-01-25 08:00:00'
 sidebar: 'auto'
 categories:
