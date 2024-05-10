@@ -8,6 +8,11 @@ tags:
  - JUC
 ---
 
+
+
+>- 在线文档：https://docs.oracle.com/javase/8/docs/api/?xd_co_f=47c934d9-e663-4eba-819c-b726fc2d0847
+>- 
+
 ## 1. 基础知识
 
 ### 进程和线程
@@ -71,6 +76,7 @@ public class Test01 {
 
 >- 非公平锁
 >- 不可中断锁
+>- 可重入锁
 
 >-  应用到实例方法上，是对当前实例对象加锁(this)
 >- 应用到代码块中，根据锁定的对象不同，加锁方式不同。
@@ -130,3 +136,9 @@ public synchronized static void sale() {
 >- 可中断锁
 >- 可重入锁
 
+<img src="../../../.vuepress/public/images/java/JUC/lock.png" alt="java juc lock">
+
+>- Lock是JUC中的接口，有三个实现类，分别为：
+>  1. ReentrantLock---实现Lock接口
+>  2. ReentrantReadWriteLock.ReadLock(读锁)--实现ReadWriteLock接口
+>  3. ReentrantReadWriteLock.WriteLock(写锁)--实现ReadWriteLock接口
