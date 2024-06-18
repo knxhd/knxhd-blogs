@@ -142,3 +142,6 @@ public synchronized static void sale() {
 >  1. ReentrantLock---实现Lock接口
 >  2. ReentrantReadWriteLock.ReadLock(读锁)--实现ReadWriteLock接口
 >  3. ReentrantReadWriteLock.WriteLock(写锁)--实现ReadWriteLock接口
+
+## 3. 线程池
+

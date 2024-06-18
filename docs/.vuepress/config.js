@@ -2,7 +2,7 @@ const nav = require("./nav.js");
 module.exports = {
     title: '柯南小海盗',
     description: '柯南小海盗',
-    base: '/knxhd-blogs/',
+    base: '/knxhd/',
     head: [
         [
             'link', {

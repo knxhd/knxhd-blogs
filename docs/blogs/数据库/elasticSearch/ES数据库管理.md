@@ -68,6 +68,10 @@ tags:
 
 >- text检索时，会根据文本进行分词，分词后进行匹配。适用于长文本，例如：新闻内容等
 
+#### 数字类型
+
+> - long、integer、short、byte、double、float、half_float、scaled_float
+
 ## 数据管理
 
 ### 删除接口
