@@ -1,5 +1,5 @@
 ---
-title: elasticSearch查询接口
+title: Spring Cloud OpenFeign的基本使用
 date: '2024-06-25 09:26:20'
 sidebar: 'auto'
 categories:
