@@ -7,11 +7,8 @@ categories:
 tags:
  - JUC
 ---
-
-
-
->- 在线文档：https://docs.oracle.com/javase/8/docs/api/?xd_co_f=47c934d9-e663-4eba-819c-b726fc2d0847
->- 
+> - 在线文档：https://docs.oracle.com/javase/8/docs/api/?xd_co_f=47c934d9-e663-4eba-819c-b726fc2d0847
+> - 
 
 ## 1. 基础知识
 
@@ -20,7 +17,7 @@ tags:
 > - 进程：操作系统分配资源的基本单位。一个进程可以包含多个线程。
 > - 线程：任务调度和执行的基本单位。
 
-- 线程的状态，可通过`Thread.State`来查看有哪些状态
+- 线程的状态，可通过 `Thread.State`来查看有哪些状态
   1. NEW
   2. RUNNABLE
   3. BLOCKED
@@ -61,11 +58,11 @@ public class Test01 {
 
 ### Synchronized和Lock锁的区别
 
->1. Synchronized是java内置的关键字，Lock是java的类。
->2. Synchronized无法获取锁的状态；Lock可以判断是否获取了锁。
->3. Synchroized不需要释放锁；Lock必须手动释放锁。
->4. Synchronized 线程一获取锁后，线程二需要一直等待；Lock锁不一定需要继续等待，可设置等待时间
->5. Synchronized 是非公平锁，不可中断锁，可重入锁；lock可重入锁，可中断锁，默认非公平锁，可设置为公平锁。
+> 1. Synchronized是java内置的关键字，Lock是java的类。
+> 2. Synchronized无法获取锁的状态；Lock可以判断是否获取了锁。
+> 3. Synchroized不需要释放锁；Lock必须手动释放锁。
+> 4. Synchronized 线程一获取锁后，线程二需要一直等待；Lock锁不一定需要继续等待，可设置等待时间
+> 5. Synchronized 是非公平锁，不可中断锁，可重入锁；lock可重入锁，可中断锁，默认非公平锁，可设置为公平锁。
 
 ### 公平锁和非公平锁
 
@@ -74,20 +71,20 @@ public class Test01 {
 
 ### Synchronized
 
->- 非公平锁
->- 不可中断锁
->- 可重入锁
+> - 非公平锁
+> - 不可中断锁
+> - 可重入锁
 
->-  应用到实例方法上，是对当前实例对象加锁(this)
->- 应用到代码块中，根据锁定的对象不同，加锁方式不同。
->- 应用到static中，相当于对Class对象加锁。
+> -  应用到实例方法上，是对当前实例对象加锁(this)
+> - 应用到代码块中，根据锁定的对象不同，加锁方式不同。
+> - 应用到static中，相当于对Class对象加锁。
 
 ### 示例方法加锁
 
 ````java
  // 打印票的数量
 public synchronized void sale() {
-	// ... 具体的执行逻辑      
+	// ... 具体的执行逻辑    
 }
 ````
 
@@ -95,7 +92,7 @@ public synchronized void sale() {
 
 #### 方式一
 
- ````java
+````java
   // 打印票的数量
      public void sale() {
          synchronized (Ticket.class) {
@@ -104,7 +101,7 @@ public synchronized void sale() {
              }
          }
      }
- ````
+````
 
 #### 方式二
 
@@ -124,24 +121,22 @@ public synchronized void sale() {
 ```java
  // 打印票的数量
 public synchronized static void sale() {
-	// ... 具体的执行逻辑      
+	// ... 具体的执行逻辑    
 }
 ```
 
-
-
 ### Lock
 
->-  默认为非公平锁，可传入参数到构造器中，制作公平锁
->- 可中断锁
->- 可重入锁
+> - 默认为非公平锁，可传入参数到构造器中，制作公平锁
+> - 可中断锁
+> - 可重入锁
 
 <img src="../../../.vuepress/public/images/java/JUC/lock.png" alt="java juc lock">
 
->- Lock是JUC中的接口，有三个实现类，分别为：
->  1. ReentrantLock---实现Lock接口
->  2. ReentrantReadWriteLock.ReadLock(读锁)--实现ReadWriteLock接口
->  3. ReentrantReadWriteLock.WriteLock(写锁)--实现ReadWriteLock接口
+> - Lock是JUC中的接口，有三个实现类，分别为：
+>
+> 1. ReentrantLock---实现Lock接口
+> 2. ReentrantReadWriteLock.ReadLock(读锁)--实现ReadWriteLock接口
+> 3. ReentrantReadWriteLock.WriteLock(写锁)--实现ReadWriteLock接口
 
 ## 3. 线程池
-
