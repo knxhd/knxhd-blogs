@@ -3,11 +3,10 @@ title: Spring Cloud OpenFeign的基本使用
 date: '2024-06-25 09:26:20'
 sidebar: 'auto'
 categories:
-
-- JAVA
-- Spring Cloud
-  tags:
-- OpenFeign
+ - Spring Cloud
+ - JAVA
+tags:
+ - OpenFeign
 ---
 ## 基本使用
 

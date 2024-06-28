@@ -7,6 +7,5 @@ categories:
 tags:
  - 响应式编程
  - Flux
-
-
 ---
+## Flux的作用

@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "export NODE_OPTIONS=--openssl-legacy-provider && vuepress dev docs",
     "build": "export NODE_OPTIONS=--openssl-legacy-provider && vuepress build docs",
-    "dev01": "vuepress dev docs",
-    "build01": "vuepress build docs",
+    "dev01": "SET NODE_OPTIONS=--openssl-legacy-provider && vuepress dev docs",
+    "build01": "SET NODE_OPTIONS=--openssl-legacy-provider && vuepress build docs",
     "nav": "vuepress nav docs"
   },
   "keywords": [],
