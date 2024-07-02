@@ -19,6 +19,7 @@ module.exports = {
                 open: true
             }
         }],
+        [ 'mermaidjs', { gantt: { barHeight: 40 }}],
         ['vuepress-plugin-code-copy', true],
         ['cursor-effects', {
             size: 2, // size of the particle, default: 2

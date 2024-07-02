@@ -20,6 +20,7 @@
     "vuepress-plugin-auto-sidebar": "^2.3.2",
     "vuepress-plugin-code-copy": "^1.0.6",
     "vuepress-plugin-cursor-effects": "^1.1.6",
+    "vuepress-plugin-mermaidjs": "^1.9.1",
     "vuepress-theme-reco": "^1.6.17"
   }
 }
