@@ -7,7 +7,6 @@ categories:
 tags:
  - vue
 ---
-
 ## npm
 
 1. npm使用淘宝镜像
@@ -36,3 +35,8 @@ vue init webpack my-project
 vue create hello-world
 ```
 
+## Vue2和Vu3区别
+
+### 引用全局变量
+
+> 在main中定

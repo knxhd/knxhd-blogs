@@ -5,9 +5,8 @@ sidebar: 'auto'
 categories:
  - 数据库
 tags:
- - elasticSearch
+ - ElasticSearch
 ---
-
 ## spring-boot-starter方式
 
 - 依赖
@@ -42,6 +41,3 @@ tags:
   ```
 
 ### BoolQueryBuilder
-
-
-
