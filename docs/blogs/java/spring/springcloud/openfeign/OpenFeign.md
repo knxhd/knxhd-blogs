@@ -58,12 +58,7 @@ public interface UserApi {
 }
 ```
 
-## 扩展
-
-- 如果使用@FeignClient实现动态配置URL，即从数据库中读取，而不是通过配置文件???
-  - 思路一：通过修改Environment中属性的值，从而在获取占位符时，动态调整
-
-### 使用熔断
+## 使用熔断
 
 >- 熔断框架支持sentinel、hytrix等，这里以sentinel为例
 
@@ -232,3 +227,61 @@ feign:
       default:
         loggerLevel: NONE
 ```
+
+### API设置
+
+#### 方式一：通过注解 `@FeignClient`传入
+
+```java
+@FeignClient(name = "app-name", url = "/api")
+public interface DemoApi {
+
+   @PostMapping(consumes = {"application/json"}, produces = {"application/json;charset=UTF-8"})
+   Object textGenerateText(@RequestBody Map<String, String> request);
+
+}
+```
+
+#### 方式二：通过参数传入
+
+```java
+@FeignClient(name = "app-name")
+public interface DemoApi {
+
+   @PostMapping(consumes = {"application/json"}, produces = {"application/json;charset=UTF-8"})
+   Object textGenerateText(URI uri, @RequestBody Map<String, String> request);
+
+}
+```
+
+### 添加headers
+
+#### 方式一：通过注解 `@HeaderMap`
+
+> - HeaderMap为feign自带的注解，可传入一个map，定义多个header属性
+
+```java
+@FeignClient(name = "app-name")
+public interface DemoApi {
+
+   @PostMapping(consumes = {"application/json"}, produces = {"application/json;charset=UTF-8"})
+   Object textGenerateText(URI uri, @HeaderMap Map<String, Object> headerMap, @RequestBody Map<String, String> request);
+
+}
+```
+
+#### 方式二：通过注解 `@RequestHeader`
+
+> - RequestHeader为Spring Web中的注解，可用于OpenFeign，Controller普通接口等
+> - 注解仅仅只能传入一个header属性，如果要传多个，则使用多次此注解
+
+```java
+@FeignClient(name = "app-name")
+public interface DemoApi {
+  
+    @PostMapping
+    Object api(@RequestHeader(value = "auth") String auth, @RequestHeader(value = "token") String token, @RequestBody Map<String,String> data);
+}
+```
+
+#### 方式三：通过项目启动时配置

@@ -42,7 +42,26 @@ docker build -f DockerFile文件位置 -t 镜像名:tag名称 镜像位置
 
 ### 基本命令
 
-<img src="../../../.vuepress/public/images/docker/dockerfile.png">
+| 指令        | 说明                                                         |
+| ----------- | ------------------------------------------------------------ |
+| FROM        | 指定所创建镜像的基础镜像                                     |
+| MAINTAINER  | 指定维护者信息                                               |
+| RUN         | 运行命令                                                     |
+| CMD         | 指定启动容器时默认执行的命令                                 |
+| LABEL       | 指定生成镜像的元数据标签信息                                 |
+| EXPOSE      | 声明镜像内服务所监听的端口                                   |
+| ENV         | 指定环境变量复制指定的<src>路径下的内容到容器中的<dest>路径下，<src>可以为URL |
+| ADD         | 如果为tar文件，会自动解压到<dest>路径下                      |
+| COPY        | 使用COPY，而不是ADD                                          |
+| ENTRYPOINT  | 指定镜像的默认入口                                           |
+| VOLUME      | 创建数据卷挂载点                                             |
+| USER        | 指定运行容器时的用户名或UID                                  |
+| WORKDIR     | 配置工作目录                                                 |
+| ARG         | 指定镜像内使用的参数（例如版本号信息等）                     |
+| ONBUILD     | 配置当所创建的镜像作为其他镜像的基础镜像时，所执行的创建操作指令 |
+| STOPSIGNAL  | 容器退出的信号值                                             |
+| HEALTHCHECK | 如何进行健康检查                                             |
+| SHELL       | 指定使用shell时的默认shell类型                               |
 
 ## DockerFile构建过程
 
